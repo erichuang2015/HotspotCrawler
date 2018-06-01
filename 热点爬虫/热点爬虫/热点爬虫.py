@@ -9,7 +9,7 @@ def OpenBrower(a=2):
     global driver_1
     chrome_options = webdriver.ChromeOptions()
     prefs = {"profile.managed_default_content_settings.images":2}
-    chrome_options.add_experimental_option("prefs",prefs)
+    chrome_options.add_experimental_option("prefs",prefs)#不开启图片
     if a==0 or a==2 :#a==2的话浏览器0，1都打开，a==1只打开浏览器1
         driver_0= webdriver.Chrome(executable_path=r"C:\chromedriver.exe",chrome_options=chrome_options)#路径前面要加个r，表示不进行转义，相当于c#的@
         driver_0.set_page_load_timeout(10)#页面最长加载时间,超过会抛出异常
